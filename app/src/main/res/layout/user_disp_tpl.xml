@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:gravity="fill"
@@ -7,21 +8,25 @@
   android:paddingTop="5sp"
   android:paddingBottom="5sp">
 
+  <!-- Rộng bằng cột (không cố định 150dp) để các ô không đè lên nhau khi màn hình hẹp -->
   <ImageView
     android:id="@+id/imv_photo"
-    android:layout_width="150dp"
+    android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:layout_gravity="center" />
+    android:layout_gravity="center"
+    android:contentDescription="@string/avatar_description"
+    android:scaleType="centerCrop" />
 
   <TextView
-    android:id="@+id/tv_title"
+    android:id="@+id/tv_username"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:fontFamily="cursive"
+    android:gravity="center"
     android:paddingTop="5sp"
     android:paddingBottom="10sp"
-    android:text="Caption"
     android:textColor="@color/white"
-    android:textSize="18sp" />
+    android:textSize="18sp"
+    tools:text="Username" />
 </LinearLayout>

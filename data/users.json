@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Nguyễn Văn An",
+      "email": "an.nguyen@example.com",
+      "tel": "0901234567",
+      "description": "Sinh viên năm 3 ngành Công nghệ thông tin, thích lập trình Android.",
+      "avatar_url": "https://randomuser.me/api/portraits/men/1.jpg",
+      "hobby": "Đọc sách, Bơi lội, Chơi guitar"
+    },
+    {
+      "id": 2,
+      "username": "Trần Thị Bích Ngọc",
+      "email": "ngoc.tran@example.com",
+      "tel": "0912345678",
+      "description": "Thiết kế đồ họa tự do, yêu màu sắc và những chuyến đi xa.",
+      "avatar_url": "https://randomuser.me/api/portraits/women/2.jpg",
+      "hobby": "Nấu ăn, Du lịch, Chụp ảnh"
+    },
+    {
+      "id": 3,
+      "username": "Lê Hoàng Minh",
+      "email": "minh.le@example.com",
+      "tel": "0987654321",
+      "description": "Kỹ sư phần mềm, cuối tuần thường đá bóng cùng bạn bè.",
+      "avatar_url": "https://randomuser.me/api/portraits/men/3.jpg",
+      "hobby": "Đá bóng, Chơi game, Nghe nhạc"
+    },
+    {
+      "id": 4,
+      "username": "Phạm Thu Hà",
+      "email": "ha.pham@example.com",
+      "tel": "0934567890",
+      "description": "Giáo viên tiểu học, thích vẽ tranh màu nước.",
+      "avatar_url": "https://randomuser.me/api/portraits/women/4.jpg",
+      "hobby": "Vẽ tranh, Yoga, Đọc sách"
+    },
+    {
+      "id": 5,
+      "username": "Hoàng Đức Huy",
+      "email": "huy.hoang@example.com",
+      "tel": "0978123456",
+      "description": "Nhân viên kinh doanh, mỗi sáng chạy bộ 5 km.",
+      "avatar_url": "https://randomuser.me/api/portraits/men/5.jpg",
+      "hobby": "Chạy bộ, Cầu lông, Xem phim"
+    },
+    {
+      "id": 6,
+      "username": "Võ Ngọc Lan",
+      "email": "lan.vo@example.com",
+      "tel": "0903456789",
+      "description": "Chủ một tiệm bánh nhỏ, thích chăm sóc cây cảnh.",
+      "avatar_url": "https://randomuser.me/api/portraits/women/6.jpg",
+      "hobby": "Trồng cây, Làm bánh, Đan len"
+    },
+    {
+      "id": 7,
+      "username": "Đặng Quốc Bảo",
+      "email": "bao.dang@example.com",
+      "tel": "0967890123",
+      "description": "Hướng dẫn viên du lịch, đã leo lên đỉnh Fansipan ba lần.",
+      "avatar_url": "https://randomuser.me/api/portraits/men/7.jpg",
+      "hobby": "Bơi lội, Leo núi, Chơi cờ vua"
+    },
+    {
+      "id": 8,
+      "username": "Bùi Thị Mai",
+      "email": "mai.bui@example.com",
+      "tel": "0945678901",
+      "description": "",
+      "avatar_url": "https://randomuser.me/api/portraits/women/8.jpg",
+      "hobby": "Ca hát, Khiêu vũ, Du lịch"
+    },
+    {
+      "id": 9,
+      "username": "Đỗ Minh Khoa",
+      "email": "khoa.do@example.com",
+      "tel": "0923456789",
+      "description": "Sinh viên năm cuối, đang làm đồ án ứng dụng di động.",
+      "avatar_url": "https://randomuser.me/api/portraits/men/9.jpg",
+      "hobby": "Lập trình, Chơi guitar, Đạp xe"
+    },
+    {
+      "id": 10,
+      "username": "Ngô Phương Linh",
+      "email": "linh.ngo@example.com",
+      "tel": "0956789012",
+      "description": "Biên dịch viên tiếng Anh, mê phim tài liệu.",
+      "avatar_url": "https://randomuser.me/api/portraits/women/10.jpg",
+      "hobby": "Học tiếng Anh, Xem phim, Nấu ăn"
+    }
+  ]
+}

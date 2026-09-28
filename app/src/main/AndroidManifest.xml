@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+  <!-- Bắt buộc để tải file JSON và ảnh avatar từ Internet -->
   <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Quyền THAY ĐỔI trạng thái mạng (theo yêu cầu bài tập). App không dùng ConnectivityManager
+       để đọc trạng thái mạng nên không cần ACCESS_NETWORK_STATE; lỗi mất mạng được bắt qua OkHttp. -->
   <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
   <application
     android:allowBackup="true"
@@ -10,8 +13,8 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:networkSecurityConfig="@xml/network_security_config"
-    android:theme="@style/Theme.ArticleApp">
-    <activity android:name="thanhdnh.ueh.edu.article_app.ViewArticleActivity"></activity>
+    android:theme="@style/Theme.UserApp">
+    <activity android:name="thanhdnh.ueh.edu.article_app.ViewUserActivity"></activity>
     <activity
       android:name="thanhdnh.ueh.edu.article_app.MainActivity"
       android:exported="true">

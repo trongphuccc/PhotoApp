@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Avatar ở màn hình Detail (dùng cả trong layout và trong code Picasso) -->
+  <dimen name="avatar_size">150dp</dimen>
+  <dimen name="avatar_corner_radius">20dp</dimen>
+  <dimen name="card_corner_radius">24dp</dimen>
+</resources>

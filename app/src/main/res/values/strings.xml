@@ -1,3 +1,25 @@
 <resources>
-  <string name="app_name">Article View</string>
+  <string name="app_name">User View</string>
+
+  <!-- Tiến trình tải -->
+  <string name="loading">Đang tải…</string>
+  <string name="loading_percent">Đang tải… %1$d%%</string>
+
+  <!-- Màn hình Detail -->
+  <string name="label_id">ID: %1$d</string>
+  <string name="label_email">Email: %1$s</string>
+  <string name="label_tel">Tel: %1$s</string>
+  <string name="label_hobby">Hobby: %1$s</string>
+  <string name="empty_value">—</string>
+  <string name="avatar_description">Ảnh đại diện</string>
+  <string name="hint_rotate_avatar">Chạm ảnh để xoay 90°</string>
+
+  <!-- Thông báo lỗi -->
+  <string name="error_no_network">Không có kết nối Internet</string>
+  <string name="error_http">Máy chủ trả về lỗi HTTP %1$d</string>
+  <string name="error_download">Tải dữ liệu thất bại</string>
+  <string name="error_json">Dữ liệu JSON không hợp lệ</string>
+  <string name="error_empty_data">Không có user nào trong dữ liệu</string>
+  <string name="error_user_not_found">Không tìm thấy user</string>
+  <string name="error_avatar">Không tải được ảnh: %1$s</string>
 </resources>

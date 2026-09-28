@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình Detail: nền xanh pastel, bên trong là một thẻ (card) trắng viền đen bo góc -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/detail_background"
+  android:padding="16dp"
+  tools:context=".ViewUserActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="20dp">
+
+    <!-- Góc trên trái: Username (chữ lớn) -->
+    <TextView
+      android:id="@+id/tv_username"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="12dp"
+      android:fontFamily="cursive"
+      android:textColor="@color/black"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@id/avatar_frame"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Username" />
+
+    <!-- Ngay dưới Username: ID (chữ nhỏ) -->
+    <TextView
+      android:id="@+id/tv_user_id"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:layout_marginEnd="12dp"
+      android:fontFamily="casual"
+      android:textColor="@color/text_secondary"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toStartOf="@id/avatar_frame"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_username"
+      tools:text="ID: 1" />
+
+    <!-- Góc trên phải: khung avatar vuông, ProgressBar nằm đè lên khung trong lúc tải -->
+    <FrameLayout
+      android:id="@+id/avatar_frame"
+      android:layout_width="@dimen/avatar_size"
+      android:layout_height="@dimen/avatar_size"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/avatar_placeholder"
+        android:contentDescription="@string/avatar_description"
+        android:scaleType="centerCrop" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ProgressBar
+          android:id="@+id/pb_avatar"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:indeterminate="true"
+          android:max="100" />
+
+        <TextView
+          android:id="@+id/tv_avatar_progress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="@string/loading"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </FrameLayout>
+
+    <!-- Gợi ý thao tác xoay ảnh -->
+    <TextView
+      android:id="@+id/tv_rotate_hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:text="@string/hint_rotate_avatar"
+      android:textColor="@color/text_secondary"
+      android:textSize="11sp"
+      app:layout_constraintEnd_toEndOf="@id/avatar_frame"
+      app:layout_constraintStart_toStartOf="@id/avatar_frame"
+      app:layout_constraintTop_toBottomOf="@id/avatar_frame" />
+
+    <!-- Barrier: đường kẻ ngang nằm dưới phần tử thấp nhất của phần đầu thẻ,
+         để các dòng Email/Tel/Hobby luôn nằm bên dưới dù username dài hay ngắn -->
+    <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/barrier_header"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="tv_user_id,tv_rotate_hint" />
+
+    <TextView
+      android:id="@+id/tv_email"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:fontFamily="casual"
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/barrier_header"
+      tools:text="Email: an.nguyen@example.com" />
+
+    <TextView
+      android:id="@+id/tv_tel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:fontFamily="casual"
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_email"
+      tools:text="Tel: 0901234567" />
+
+    <!-- Hobby có thể dài -> width 0dp để TextView tự xuống dòng trong thẻ -->
+    <TextView
+      android:id="@+id/tv_hobby"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:fontFamily="casual"
+      android:textColor="@color/black"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_tel"
+      tools:text="Hobby: Đọc sách, Bơi lội, Chơi guitar" />
+
+    <!-- Mô tả (chữ nhỏ hơn); code sẽ ẩn nếu user không có description -->
+    <TextView
+      android:id="@+id/tv_description"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:fontFamily="casual"
+      android:textColor="@color/text_secondary"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_hobby"
+      tools:text="Mô tả ngắn về user" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

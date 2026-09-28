@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/gridview"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@color/black"
-  android:gravity="fill"
-  android:numColumns="3"
-  android:padding="5px"
-  android:stretchMode="columnWidth"
-  tools:context=".MainActivity" />
+  tools:context=".MainActivity">
+
+  <!-- Lưới user: giữ nguyên như giao diện cũ -->
+  <GridView
+    android:id="@+id/gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="fill"
+    android:numColumns="3"
+    android:padding="5px"
+    android:stretchMode="columnWidth" />
+
+  <!-- Tiến trình tải JSON: hiện ở giữa màn hình, tải xong thì ẩn -->
+  <LinearLayout
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ProgressBar
+      android:id="@+id/pb_loading"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      android:max="100" />
+
+    <TextView
+      android:id="@+id/tv_loading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/loading"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+  </LinearLayout>
+</FrameLayout>
